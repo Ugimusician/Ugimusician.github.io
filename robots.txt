@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://ugimusician.github.io/My-Site/sitemap.xml
