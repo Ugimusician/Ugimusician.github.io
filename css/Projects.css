@@ -1,0 +1,198 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: #333333;
+    
+}
+
+.wrapper {
+  position: absolute;
+  top: 20px; /* distance from top of image */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(56, 56, 56);
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  border: #1f1f1f solid 2px;
+
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.audio-player {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 100px;
+}
+
+.player-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.track-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.track-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.track-list li:hover {
+  background-color: #3a3a3a;
+}
+
+.track-list img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.track-list span {
+  font-size: 18px;
+}
+
+.site-footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border-top: 2px solid #333;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.site-footer p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.site-footer a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

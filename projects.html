@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/Projects.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+      <div class="wrapper">
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<section class="audio-player">
+  <h2>My Tracks</h2>
+  <div class="player-box">
+    <audio id="audio" controls>
+      <source src="audio/Backgroud music.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+
+    <ul class="track-list">
+      <li data-src="Backgroud music.mp3">
+        <img src="images/triangle-2136288_640.jpg" alt="Track 1">
+        <span>Track 1 - Background music</span>
+      </li>
+      <li data-src="audio/track2.mp3">
+        <img src="images/cover2.jpg" alt="Track 2">
+        <span>Track 2 - Coming soon</span>
+      </li>
+      <li data-src="audio/track3.mp3">
+        <img src="images/cover3.jpg" alt="Track 3">
+        <span>Track 3 - Coming soon</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  const audioPlayer = document.getElementById('audio');
+  const tracks = document.querySelectorAll('.track-list li');
+
+  tracks.forEach(track => {
+    track.addEventListener('click', () => {
+      const src = track.getAttribute('data-src');
+      // Change audio source
+      audioPlayer.src = src;
+      audioPlayer.play();
+      
+
+
+    });
+  });
+</script>
+
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <img src="images/Newlogo-modified.png" alt="UGI Musician Logo" class="footer-logo" />
+    <p>© 2025 UGI Musician. All rights reserved.</p>
+    <p>Follow me on
+      <a href="https://instagram.com/yourhandle" target="_blank">Soundcloud</a>,
+      <a href="https://youtube.com/yourchannel" target="_blank">Youtube</a> and
+      <a href="https://youtube.com/yourchannel" target="_blank">Tiktok</a>
+
+    </p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

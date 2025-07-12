@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ugimusician</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<div class="hero">
+  <img src="Images/dj-4856147.jpg" alt="cool pic" />
+    <div class="hero-text">
+    <h1>Welcome</h1>
+    <p>Hi I'm Ugimusician, I do sound design</p>
+  </div>
+</div>
+  <div class="wrapper">
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<section class="about">
+  <div class="about-section">
+    <h2>About Me</h2>
+    <p>
+      I'm a 14 year old sound designer, musician, and tech enthusiast.
+      I started experimenting with sound design from early age.
+      Now I'm building everything myself — from custom audio tools to this website. 
+      <br>
+      <br>
+      I do sound packs, vital presets and full on songs 
+    </p>
+  </div>
+</section>
+
+<section class="projects-preview">
+  <div class="preview-image">
+    <img src="Images/sound-4675091_1920.jpg" alt="idk" class="prImage">
+    <button class="check-me-out">Check out my Projects</button>
+  </div>
+</section>
+
+<section class="youtube-section" id="youtube">
+  <h2>My YouTube Channel</h2>
+  <p>I post tutorials, sound design breakdowns, and more.</p>
+
+  <div class="video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RceBRniLiBc" 
+      frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+<h1 class="bktxt">Book here</h1>
+
+<section class="booking-form">
+  <h2>Direct form</h2>
+  <input id="email" type="email" class="email" placeholder="Your Email" />
+
+  <textarea id="firstname" class="name" placeholder="First Name" rows="1"></textarea>
+  <textarea id="lastname" class="last-name" placeholder="Last Name" rows="1"></textarea>
+  <textarea id="message" class="message" placeholder="Your Message" rows="8"></textarea>
+
+  <button class="submit" onclick="sendMail()">Submit</button>
+
+  <h3>Or Google Form if direct form doesn't work 👇</h3>
+  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeSWYzeLqteJtnkknbIHNcY2UaMFDLCeNE3sPcl9dU8YXkkrQ/viewform?usp=sharing&ouid=111206038755530258769" target="_blank">Here</a></p>
+</section>
+
+<script>
+function sendMail() {
+  const email = document.getElementById("email").value.trim();
+  const firstName = document.getElementById("firstname").value.trim();
+  const lastName = document.getElementById("lastname").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!email || !firstName || !lastName || !message) {
+    alert("Please fill out all fields.");
+    return;
+  }
+
+  const subject = encodeURIComponent(`Booking from ${firstName} ${lastName}`);
+  const body = encodeURIComponent(`Email: ${email}\n\n${message}`);
+
+  window.location.href = `mailto:your@email.com?subject=${subject}&body=${body}`;
+}
+</script>
+
+<section class="future-goals">
+  <h2>Future Goals</h2>
+  <ul>
+    <li>Master advanced sound design techniques</li>
+    <li>Build custom audio tools and plugins</li>
+    <li>Release my own music and sound packs</li>
+    <li>Expand my website with interactive projects</li>
+  </ul>
+  <img src="Images/microphone-6763585_1920.jpg" alt="">
+</section>
+
+<section class="honorable-mention">
+  <h2>Honorable Mention</h2>
+  <div class="frame">
+    <img src="Images/IMG20250709213240.jpg" alt="My Dog" />
+    <p>This is my dog — my #1 studio assistant 🐾</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <img src="Images/Newlogo-modified.png" alt="UGI Musician Logo" class="footer-logo" />
+    <p>© 2025 UGI Musician. All rights reserved.</p>
+    <p>Follow me on
+      <a href="https://instagram.com/yourhandle" target="_blank">Soundcloud</a>,
+      <a href="https://youtube.com/yourchannel" target="_blank">YouTube</a> and
+      <a href="https://youtube.com/yourchannel" target="_blank">Tiktok</a>
+    </p>
+  </div>
+</footer>
