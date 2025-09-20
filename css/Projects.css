@@ -44,6 +44,42 @@ body{
   font-size: 16px;
 }
 
+#playBtn {
+  background-color: #1a1a1a;
+  border: 0px;
+  border-radius: 10px;
+  width:  100px ;
+  height: 60px ;
+  font-size: 20px;
+  color: white;
+  font-family: 'montserrat' Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+#playBtn:hover {
+  background: #3d3f3d;
+}
+
+#timeBar {
+  width: 100%;
+  margin: 10px 0;
+  appearance: none;
+  height: 5px;
+  border-radius: 5px;
+  background: #444;
+  outline: none;
+}
+#timeBar::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #080808;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
 .audio-player {
   background-color: #1a1a1a;
   color: white;
@@ -132,6 +168,71 @@ audio {
 .site-footer a:hover {
   color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
