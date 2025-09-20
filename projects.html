@@ -24,44 +24,83 @@
 <section class="audio-player">
   <h2>My Tracks</h2>
   <div class="player-box">
-    <audio id="audio" controls>
+    <!-- Main audio element -->
+    <audio id="myAudio">
       <source src="audio/Backgroud music.mp3" type="audio/mp3">
+      <source src="audio/Experimental EDM.wav" type="audio/wav">
+      <source src="audio/Test.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
 
+    <!-- Play/Pause button -->
+    <button id="playBtn">▶️ Play</button>
+
+    <!-- Time bar -->
+    <input type="range" id="timeBar" value="0" min="0" max="100">
+
+    <!-- Track list -->
     <ul class="track-list">
-      <li data-src="Backgroud music.mp3">
+      <li data-src="audio/Backgroud music.mp3">
         <img src="images/triangle-2136288_640.jpg" alt="Track 1">
         <span>Track 1 - Background music</span>
       </li>
-      <li data-src="audio/track2.mp3">
-        <img src="images/cover2.jpg" alt="Track 2">
-        <span>Track 2 - Coming soon</span>
+      <li data-src="audio/Experimental EDM.wav">
+        <img src="images/abstract-7403456_1280.png" alt="Track 2">
+        <span>Track 2 - Experimental EDM</span>
       </li>
-      <li data-src="audio/track3.mp3">
-        <img src="images/cover3.jpg" alt="Track 3">
-        <span>Track 3 - Coming soon</span>
+      <li data-src="audio/Test.wav">
+        <img src="images/pattern-9236734_1280.png" alt="Track 3">
+        <span>Track 3 - Another EDM</span>
       </li>
     </ul>
   </div>
 </section>
 
 <script>
-  const audioPlayer = document.getElementById('audio');
-  const tracks = document.querySelectorAll('.track-list li');
+  const audio = document.getElementById("myAudio");
+  const button = document.getElementById("playBtn");
+  const timeBar = document.getElementById("timeBar");
+  const tracks = document.querySelectorAll(".track-list li");
 
+  // Toggle play/pause
+  button.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      button.textContent = "⏸️ Pause";
+    } else {
+      audio.pause();
+      button.textContent = "▶️ Play";
+    }
+  });
+
+  // Load and play track when clicked
   tracks.forEach(track => {
-    track.addEventListener('click', () => {
-      const src = track.getAttribute('data-src');
-      // Change audio source
-      audioPlayer.src = src;
-      audioPlayer.play();
-      
-
-
+    track.addEventListener("click", () => {
+      let src = track.getAttribute("data-src");
+      audio.src = src;
+      audio.play();
+      button.textContent = "⏸️ Pause";
     });
   });
+
+  // Update progress bar as song plays
+  audio.addEventListener("timeupdate", () => {
+    let progress = (audio.currentTime / audio.duration) * 100;
+    timeBar.value = progress;
+  });
+
+  // Seek when user drags the slider
+  timeBar.addEventListener("input", () => {
+    audio.currentTime = (timeBar.value / 100) * audio.duration;
+  });
+
+  // Reset button when audio ends
+  audio.addEventListener("ended", () => {
+    button.textContent = "▶️ Play";
+    timeBar.value = 0;
+  });
 </script>
+
 
 
 <footer class="site-footer">
